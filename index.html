@@ -31,37 +31,25 @@
         <div class="container-md">
           <div id="slider" class="d-flex">
             
-            <!-- contenitore per immagine in evidenza -->
+            <!-- contenitore per immagine in evidenza con bottoni -->
             <div class="active-pic flex-shrink-0">
               <div class="buttons-container">
                 <!-- bottone scorri in su -->
-                <button id="btn-up" class="btn btn-white">
+                <button id="btn-up" class="btn btn-white" @click="decrementIndex()">
                   <i class="bi bi-arrow-up-circle"></i>
                 </button>
                 <!-- bottone scorri in giù -->
-                <button id="btn-down" class="btn btn-white">
+                <button id="btn-down" class="btn btn-white" @click="incrementIndex()">
                   <i class="bi bi-arrow-down-circle"></i>
                 </button>                
               </div>
-              <img src="img/01.webp" alt="" class="img-fluid">
+              <img :src="imagesList[activeIndex].image" alt="" class="img-fluid">
             </div>
             
             <!-- raccoglitore per anteprime -->
             <div class="thumbs">
-              <div class="img-seat flex-row-center">
-                <img src="img/01.webp" alt="" class="img-fluid">              
-              </div>
-              <div class="img-seat flex-row-center">
-                <img src="img/02.webp" alt="" class="img-fluid">
-              </div>
-              <div class="img-seat flex-row-center">
-                <img src="img/03.webp" alt="" class="img-fluid">
-              </div>
-              <div class="img-seat flex-row-center">
-                <img src="img/04.webp" alt="" class="img-fluid">
-              </div>
-              <div class="img-seat flex-row-center">
-                <img src="img/05.webp" alt="" class="img-fluid">
+              <div class="img-seat flex-row-center" v-for="image in imagesList">
+                <img :src="image.image" alt="" class="img-fluid">              
               </div>
             </div>
 

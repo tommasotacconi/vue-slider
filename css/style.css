@@ -93,7 +93,7 @@ body {
 
 #btn-up,
 #btn-down {
-  color: white;
+  color: lightslategray;
   position: absolute;
   left: 50%;
   z-index: 1;
@@ -101,9 +101,9 @@ body {
 }
 
 #btn-up {
-  top: 10px;
+  top: 0;
 }
 
 #btn-down {
-  bottom: 10px;
+  bottom: 0;
 }
