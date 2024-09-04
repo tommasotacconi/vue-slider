@@ -31,8 +31,9 @@
         <div class="container-md">
           <div id="slider" class="d-flex">
             
-            <!-- contenitore per immagine in evidenza con bottoni -->
+            <!-- contenitore per immagine in evidenza, testo e bottoni -->
             <div class="stage-pic flex-shrink-0">
+              <img :src="imagesList[activeIndex].image" alt="" class="img-fluid">
               <div class="buttons-container">
                 <!-- bottone scorri in su -->
                 <button id="btn-up" class="btn btn-white" @click="decrementIndex()">
@@ -43,8 +44,16 @@
                   <i class="bi bi-arrow-down-circle"></i>
                 </button>                
               </div>
-              <img :src="imagesList[activeIndex].image" alt="" class="img-fluid">
+              <div class="text-box">
+                <h1>
+                  {{ imagesList[activeIndex].title }}
+                </h1>
+                <p>
+                  {{ imagesList[activeIndex].text }}
+                </p>
+              </div>
             </div>
+            
             
             <!-- raccoglitore per anteprime -->
             <div class="thumbs">

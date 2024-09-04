@@ -112,3 +112,14 @@ body {
 #btn-down {
   bottom: 5px;
 }
+
+.text-box {
+  margin: 0 30px 15px;
+  width: 45%;
+  padding: 5px 15px;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #0000005f;
+}
