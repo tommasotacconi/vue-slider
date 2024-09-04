@@ -39,7 +39,6 @@ createApp({
     incrementIndex: function () {
       if (this.activeIndex >= this.imagesList.length - 1) this.activeIndex = 0;
       else this.activeIndex++;
-      // evidenzio il thumbnail grazie all'apposita classe current preparata, che viene data tramite l'indice appena calcolato
     },
     decrementIndex: function () {
       if (this.activeIndex <= 0) this.activeIndex = this.imagesList.length - 1;
