@@ -4,7 +4,6 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      message: 'Hello Vue!',
       imagesList: [
         {
             image: 'img/01.webp',
@@ -43,7 +42,10 @@ createApp({
     decrementIndex: function () {
       if (this.activeIndex <= 0) this.activeIndex = this.imagesList.length - 1;
       else this.activeIndex--;  
-    }
-  }
+    },
+  },
+  mounted () {
+      const timer = setInterval(this.incrementIndex, 3000);
+  },
 }).mount('#app');
 
