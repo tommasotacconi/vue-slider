@@ -32,7 +32,7 @@
           <div id="slider" class="d-flex">
             
             <!-- contenitore per immagine in evidenza con bottoni -->
-            <div class="active-pic flex-shrink-0">
+            <div class="stage-pic flex-shrink-0">
               <div class="buttons-container">
                 <!-- bottone scorri in su -->
                 <button id="btn-up" class="btn btn-white" @click="decrementIndex()">
@@ -48,7 +48,7 @@
             
             <!-- raccoglitore per anteprime -->
             <div class="thumbs">
-              <div class="img-seat flex-row-center" v-for="image in imagesList">
+              <div class="img-seat flex-row-center" :class="{ staged: activeIndex == index }" v-for="(image, index) in imagesList">
                 <img :src="image.image" alt="" class="img-fluid">              
               </div>
             </div>

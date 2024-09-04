@@ -69,16 +69,16 @@ body {
   height: 50vh;
 }
 
-.active-pic {
+.stage-pic {
   overflow: hidden;
   flex-basis: 90%;
   position: relative;
+  background-color: #eee;
 
   img {
     translate: 0 -20%;
   } 
 }
-
 
 .img-seat {
   height: calc(100% / 5);
@@ -91,9 +91,14 @@ body {
   } */
 }
 
+.staged {
+  border-color: #27c9ff;
+}
+
 #btn-up,
 #btn-down {
-  color: lightslategray;
+  color: #5aaac5;
+  font-size: 1.5rem;
   position: absolute;
   left: 50%;
   z-index: 1;
@@ -101,9 +106,9 @@ body {
 }
 
 #btn-up {
-  top: 0;
+  top: 5px;
 }
 
 #btn-down {
-  bottom: 0;
+  bottom: 5px;
 }
