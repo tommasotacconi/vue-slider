@@ -61,3 +61,49 @@ body {
 } */
 
 /* Utilities */
+#app {
+  margin-top: 100px;
+}
+
+#slider {
+  height: 50vh;
+}
+
+.active-pic {
+  overflow: hidden;
+  flex-basis: 90%;
+  position: relative;
+
+  img {
+    translate: 0 -20%;
+  } 
+}
+
+
+.img-seat {
+  height: calc(100% / 5);
+  overflow-y: hidden;
+  background-color: #444;
+  border: 3px solid black;
+
+  /* img {
+    translate: 0 -10%;
+  } */
+}
+
+#btn-up,
+#btn-down {
+  color: white;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+  translate: -50% 0;
+}
+
+#btn-up {
+  top: 10px;
+}
+
+#btn-down {
+  bottom: 10px;
+}

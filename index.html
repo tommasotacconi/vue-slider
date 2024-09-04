@@ -25,14 +25,52 @@
   <body>
       <!-- Vue connection -->
       <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+      
       <!-- Page HTML -->
       <div id="app">
-        {{ message }}
+        <div class="container-md">
+          <div id="slider" class="d-flex">
+            
+            <!-- contenitore per immagine in evidenza -->
+            <div class="active-pic flex-shrink-0">
+              <div class="buttons-container">
+                <!-- bottone scorri in su -->
+                <button id="btn-up" class="btn btn-white">
+                  <i class="bi bi-arrow-up-circle"></i>
+                </button>
+                <!-- bottone scorri in giù -->
+                <button id="btn-down" class="btn btn-white">
+                  <i class="bi bi-arrow-down-circle"></i>
+                </button>                
+              </div>
+              <img src="img/01.webp" alt="" class="img-fluid">
+            </div>
+            
+            <!-- raccoglitore per anteprime -->
+            <div class="thumbs">
+              <div class="img-seat flex-row-center">
+                <img src="img/01.webp" alt="" class="img-fluid">              
+              </div>
+              <div class="img-seat flex-row-center">
+                <img src="img/02.webp" alt="" class="img-fluid">
+              </div>
+              <div class="img-seat flex-row-center">
+                <img src="img/03.webp" alt="" class="img-fluid">
+              </div>
+              <div class="img-seat flex-row-center">
+                <img src="img/04.webp" alt="" class="img-fluid">
+              </div>
+              <div class="img-seat flex-row-center">
+                <img src="img/05.webp" alt="" class="img-fluid">
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-
+      
       <!-- javascript connection -->
       <script src="jscript/script.js"></script>
-  </body>
+    </body>
 </html>
