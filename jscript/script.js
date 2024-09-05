@@ -32,6 +32,7 @@ createApp({
         },
       ],
       activeIndex: 0,
+      autoplay: null,
     };
   },
   methods: {
@@ -41,11 +42,17 @@ createApp({
     },
     decrementIndex: function () {
       if (this.activeIndex <= 0) this.activeIndex = this.imagesList.length - 1;
-      else this.activeIndex--;  
+      else this.activeIndex--; 
     },
+    leafThroughSli: function () {
+      this.autoplay = setInterval(this.incrementIndex, 3000);
+    },
+    stopLeafThroughSli: function () {
+      clearInterval(this.autoplay);
+    }
   },
-  mounted () {
-      const timer = setInterval(this.incrementIndex, 3000);
+  created () {
+    this.leafThroughSli();
   },
 }).mount('#app');
 

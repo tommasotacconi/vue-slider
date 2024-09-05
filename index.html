@@ -56,7 +56,8 @@
             
             
             <!-- raccoglitore per anteprime -->
-            <div class="thumbs">
+            <div class="thumbs" @mouseover="stopLeafThroughSli()"
+            @mouseleave="leafThroughSli()">
               <div class="img-seat flex-row-center" :class="{ staged: activeIndex == index }" v-for="(image, index) in imagesList" @click="activeIndex = index">
                 <img :src="image.image" alt="" class="img-fluid">              
               </div>
